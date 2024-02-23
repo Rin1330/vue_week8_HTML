@@ -1,6 +1,14 @@
 // normal swiper style
+.bannerInner {
+  margin-right: -67%;
+  margin-left: -67%;
+}
+
 .swiper {
-  // overflow: inherit;
+  h2 {
+    position: relative;
+    z-index: 5;
+  }
   &-button-prev,
   &-button-next {
     width: 44px;
@@ -38,5 +46,22 @@
   &-pagination-bullet-active {
     width: 40px;
     background: $brand-300;
+  }
+  &-slide{
+    width: 100%;
+    h2 {
+      position: relative;
+      z-index: 2;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,.2);
+      z-index: 1;
+    }
   }
 }
