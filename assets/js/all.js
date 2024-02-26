@@ -1,37 +1,36 @@
-// import * as bootstrap from 'bootstrap';
-// import Swiper from 'swiper/bundle';
-// import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'
+import * as bootstrap from 'bootstrap';
+import Swiper from 'swiper/bundle';
 
-// console.log(Swiper);
+const menuBtn = document.querySelector('#menuBtn');
+const menuCloseBtn = document.querySelector('#menuCloseBtn');
+const bsOffcanvas = new bootstrap.Offcanvas('#mainMenu');
 
-// const menuBtn = document.querySelector('#menuBtn');
-// const menuCloseBtn = document.querySelector('#menuCloseBtn');
-// const bsOffcanvas = new bootstrap.Offcanvas('#mainMenu');
+menuBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  bsOffcanvas.show();
+})
 
-// menuBtn.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   bsOffcanvas.show();
-// })
-
-// menuCloseBtn.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   bsOffcanvas.hide();
-// })
+menuCloseBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  bsOffcanvas.hide();
+})
 
 const indexFunction = {
   mainBannerInit: () => {
     const swiper = new Swiper('#mainBanner', {
       loop: true,
-      initialSlide: 0,
-      slidesPerView: 3,
+      // loopAdditionalSlides: 4,
+      // slidesPerView: 1,
+      centeredSlides : true,
+      // initialSlide: 0,
+      slidesPerView: 1.5,
       slidesPerGroup: 1,
-      centeredSlides: false,
-      spaceBetween: 0,
-      watchOverflow: true,
-      // autoplay: {
-      //   delay: 3000,
-      //   pauseOnMouseEnter: true
-      // },
+      // watchOverflow: true,
+      speed: 1500,
+      autoplay: {
+        delay: 10000,
+        pauseOnMouseEnter: true
+      },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
