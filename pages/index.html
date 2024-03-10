@@ -11,7 +11,35 @@
 <body>
   <%- include('./layout/header'); -%>
   <main>
-    <%- include('./layout/banner'); -%>
+      <!-- main banner -->
+      <section class="banner overflow-hidden">
+        <div class="container">
+          <div class="swiper overflow-visible" id="mainBanner">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide position-relative">
+                <h2 class="d-block px-4 w-100 text-center fs-4 fs-lg-1 text-gray-400 position-absolute top-50 start-50 translate-middle">一站式高級食材專門店</h2>
+                <img src="/assets/images/swiper-banner-1.png" class="img-fluid d-none d-lg-block" alt="一站式高級食材專門店">
+                <img src="/assets/images/swiper-banner-sm-1.png" class="img-fluid d-lg-none" alt="一站式高級食材專門店">
+              </div>
+              <div class="swiper-slide position-relative">
+                <h2 class="d-block px-4 w-100 text-center fs-4 fs-lg-1 text-gray-400 position-absolute top-50 start-50 translate-middle">國際認可衛生標準生產廠房</h2>
+                <img src="/assets/images/swiper-banner-2.png" class="img-fluid d-none d-lg-block" alt="國際認可衛生標準生產廠房">
+                <img src="/assets/images/swiper-banner-sm-2.png" class="img-fluid d-lg-none" alt="國際認可衛生標準生產廠房">
+              </div>
+              <div class="swiper-slide position-relative">
+                <h2 class="d-block px-4 w-100 text-center fs-4 fs-lg-1 text-gray-400 position-absolute top-50 start-50 translate-middle">
+                  送貨服務<br />最快3個工作天<br />購物滿$500即可免運費
+                </h2>
+                <img src="/assets/images/swiper-banner-3.png" class="img-fluid d-none d-lg-block" alt="送貨服務,最快3個工作天,購物滿$500即可免運費">
+                <img src="/assets/images/swiper-banner-sm-3.png" class="img-fluid d-lg-none" alt="送貨服務,最快3個工作天,購物滿$500即可免運費">
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <a href="javascript:;" class="swiper-button-prev d-none d-lg-block"></a>
+            <a href="javascript:;" class="swiper-button-next d-none d-lg-block"></a>
+          </div>
+        </div>
+      </section>
       <!-- content here -->
       <div class="container">
         <section class="py-6 py-lg-7">
@@ -55,8 +83,63 @@
           </div>
         </section>
       </div>
-      <section class="py-6 py-lg-7">
-        
+      <section class="py-6 py-lg-7 newProduct" id="newProduct">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center mb-5 mb-lg-6">
+            <h2 class="fs-4 fs-lg-2 gray-100">最新貨品</h2>
+            <a href="javascript:;" class="fs-6 fs-lg-4 moreBtn">查看更多 ></a>
+          </div>
+          <div class="position-relative">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <a href="javascript:;" class="card d-block h-100 rounded-16 overflow-hidden" style="width: 306px;">
+                  <img src="../assets/images/Food01.png" class="card-img-top rounded-16" alt="food-1">
+                  <div class="card-body">
+                    <p class="card-text mb-2 lh-sm text-line-clamp ">波蘭ANIMEX YANO 天然無激素豬梅肉扒 500G </p>
+                    <div class="d-flex align-items-center mt-auto">
+                      <p class="text-brand-400 fw-medium">HK$ 75.00</p>
+                      <del class="text-gray-200 ms-2 del">HK$ 75.00</del>
+                    </div>
+                  </div>
+                </a>
+    
+                <a href="javascript:;" class="card d-block h-100 rounded-16 overflow-hidden" style="width: 306px;">
+                  <img src="../assets/images/Food02.png" class="card-img-top rounded-16" alt="food-1">
+                  <div class="card-body">
+                    <p class="card-text mb-2 lh-sm text-line-clamp ">美國安格斯肥牛粒 200G</p>
+                    <div class="d-flex align-items-center mt-auto">
+                      <p class="text-brand-400 fw-medium">HK$ 75.00</p>
+                    </div>
+                  </div>
+                </a>
+    
+                <a href="javascript:;" class="card d-block h-100 rounded-16 overflow-hidden" style="width: 306px;">
+                  <img src="../assets/images/Food03.png" class="card-img-top rounded-16" alt="food-1">
+                  <div class="card-body">
+                    <p class="card-text mb-2 lh-sm text-line-clamp ">日本幸子非籠飼雞蛋10隻
+                    </p>
+                    <div class="d-flex align-items-center mt-auto">
+                      <p class="text-brand-400 fw-medium">HK$ 75.00</p>
+                    </div>
+                  </div>
+                </a>
+    
+                <a href="javascript:;" class="card d-block h-100 rounded-16 overflow-hidden" style="width: 306px;">
+                  <img src="../assets/images/Food04.png" class="card-img-top rounded-16" alt="food-1">
+                  <div class="card-body">
+                    <p class="card-text mb-2 lh-sm text-line-clamp ">越南Marina Fresh 特大鳳尾虎蝦仁 500G</p>
+                    <div class="d-flex align-items-center mt-auto">
+                      <p class="text-brand-400 fw-medium">HK$ 75.00</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <a href="javascript:;" class="swiper-button-prev d-none d-lg-block"></a>
+            <a href="javascript:;" class="swiper-button-next d-none d-lg-block"></a>
+          </div>
+        </div>
       </section>
   </main>
 

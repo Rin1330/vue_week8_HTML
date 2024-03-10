@@ -455,10 +455,10 @@ $body-emphasis-color:       $black !default;
 //
 // Style anchor elements.
 
-$link-color:                              $primary !default;
+$link-color:                              #38415A; //$primary !default;
 $link-decoration:                         none; //underline !default;
 $link-shade-percentage:                   20% !default;
-$link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
+$link-hover-color:                        #A2B2DF; //shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
 
 $stretched-link-pseudo-element:           after !default;
@@ -632,7 +632,7 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-normal !default;
 
 $line-height-base:            1.5 !default;
-$line-height-sm:              1.25 !default;
+$line-height-sm:              1.2 !default;
 $line-height-lg:              2 !default;
 
 $h1-font-size:                $font-size-base * 2.5 !default;     //40
@@ -1344,23 +1344,23 @@ $placeholder-opacity-min:           .2 !default;
 // Cards
 
 // scss-docs-start card-variables
-$card-spacer-y:                     $spacer * 1.5 !default;
-$card-spacer-x:                     $spacer * 1.5 !default;
+$card-spacer-y:                     $spacer * .75;//$spacer * 1.5 !default;
+$card-spacer-x:                     $spacer * 1;//$spacer * 1.5 !default;
 $card-title-spacer-y:               $spacer * .5 !default;
 $card-title-color:                  $gray-100; //null !default;
 $card-subtitle-color:               null !default;
-$card-border-width:                 var(--#{$prefix}border-width) !default;
-$card-border-color:                 #A2B2DF; //var(--#{$prefix}border-color-translucent) !default;
+$card-border-width:                 0; //var(--#{$prefix}border-width) !default;
+$card-border-color:                 null; //#A2B2DF; //var(--#{$prefix}border-color-translucent) !default;
 $card-border-radius:                1rem; //var(--#{$prefix}border-radius) !default;
 $card-box-shadow:                   null !default;
-$card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
+$card-inner-border-radius:          1rem;// subtract($card-border-radius, $card-border-width) !default;
 $card-cap-padding-y:                $card-spacer-y * .5 !default;
 $card-cap-padding-x:                $card-spacer-x !default;
 $card-cap-bg:                       rgba(var(--#{$prefix}body-color-rgb), .03) !default;
 $card-cap-color:                    null !default;
 $card-height:                       null !default;
-$card-color:                        $gray-200; //null !default;
-$card-bg:                           var(--#{$prefix}body-bg) !default;
+$card-color:                        $gray-100; //null !default;
+$card-bg:                           null; //var(--#{$prefix}body-bg) !default;
 $card-img-overlay-padding:          $spacer !default;
 $card-group-margin:                 $grid-gutter-width * .5 !default;
 // scss-docs-end card-variables

@@ -17,15 +17,10 @@ menuCloseBtn.addEventListener('click', (e) => {
 
 const indexFunction = {
   mainBannerInit: () => {
-    const swiper = new Swiper('#mainBanner', {
+    const mainBannerSwiper = new Swiper('#mainBanner', {
       loop: true,
-      // loopAdditionalSlides: 4,
-      // slidesPerView: 1,
+      slidesPerView: 1,
       centeredSlides : true,
-      // initialSlide: 0,
-      slidesPerView: 1.5,
-      slidesPerGroup: 1,
-      // watchOverflow: true,
       speed: 1500,
       autoplay: {
         delay: 10000,
@@ -43,23 +38,6 @@ const indexFunction = {
         prevEl: '#mainBanner .swiper-button-prev',
       },
     });
-    // const swiper = new Swiper("#mySwiper", {
-    //   slidesPerView: 4,
-    //   slidesPerGroup: 1,
-    //   centeredSlides: false,
-    //   loop: true,
-    //   slideToClickedSlide: true,
-    //   spaceBetween: 10,
-    //   pagination: {
-    //     el: ".swiper-pagination",
-    //     clickable: true,
-    //   },
-    //     // Navigation arrows
-    //   navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    //   },
-    // });
   },
   otherInit: () => {
     console.log('other');
