@@ -18,9 +18,9 @@ menuCloseBtn.addEventListener('click', (e) => {
 const indexFunction = {
   mainBannerInit: () => {
     const mainBannerSwiper = new Swiper('#mainBanner', {
-      loop: true,
+      // loop: true,
       slidesPerView: 1,
-      centeredSlides : true,
+      // centeredSlides : true,
       speed: 1500,
       autoplay: {
         delay: 10000,
@@ -39,9 +39,28 @@ const indexFunction = {
       },
     });
   },
+  newProductSwiperInit: () => {
+    const newProductSwiper = new Swiper('#newProduct .swiper', {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      spaceBetween: 12,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: (idx, className) => {
+          return `<span class="${className}">${idx + 1}</span>`
+        }
+      },
+      navigation: {
+        nextEl: '#newProduct .swiper-button-next',
+        prevEl: '#newProduct .swiper-button-prev',
+      },
+    });
+  },
   otherInit: () => {
     console.log('other');
   }
 }
 
 document.querySelector('#mainBanner') ? indexFunction.mainBannerInit() : '';
+// document.querySelector('#newProduct') ? indexFunction.newProductSwiperInit() : '';
